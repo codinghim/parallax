@@ -2,64 +2,42 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+    let styleArrOne = [styles.section, styles.parallax, styles.bg_1]
+  let styleArrTwo = [styles.section, styles.static]
+  let styleArrThree = [styles.section, styles.parallax, styles.bg_2]
+  
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div className={styles.wrapper}>
+    <section className={styleArrOne.join(' ')}>
+      <h1 className={styles.section_header_1}>Welcome to Steak House</h1>
+      <p className={styles.lg_font}>Where True High Quality Meat Is Served.</p>
+    </section>
+    <section className={styleArrTwo.join(' ')}>
+      <div className={styles.content_container}>
+        <div className={styles.text_container}>
+          <h1 className={styles.section_header_2}>We&apos;ve perfected and refined our craft over a period of 30 years.</h1>
+          <p>Practice makes perfect and our chefs are here to prove it. This is a paragraph and you can edit it with whichever text you desire. Lorem Ipsum.</p>
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <div className={styles.img_container}>
+        </div>
+      </div>
+    </section>
+    <section className={styleArrThree.join(' ')}>
+       <h1 className={styles.flavor_header}>We don&apos;t settle for less, and neither should you</h1>
+       <p className={styles.flavor_text}>Our ingredients are fresh and organic. We strive to use the ingredients of the best quality and review our imports thoroughly. This is a paragraph and you can edit it with whichever text you desire. Lorem Ipsum.</p>
+    </section>
+    <section className={styleArrTwo.join(' ')}>
+
+      <div className={styles.content_container}>
+        <div className={styles.img_container_2}>
+        </div>
+        <div className={styles.text_container}>
+          <h1 className={styles.section_header_2}>Sate your hunger with something deserving.</h1>
+          <p>Explore our wide variety of steak cuisine and great drinks to complement them. This is a paragraph and you can edit it with whichever text you desire. Lorem Ipsum.</p>
+        </div>
+      </div>
+    </section>
     </div>
   )
 }
